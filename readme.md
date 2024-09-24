@@ -29,7 +29,7 @@ Replace `<gitUrl>` with the HTTPS or SSH URL of the Git repository you want to p
 
 ### Options
 
-#### --exclude <patterns...>
+#### `--exclude <patterns...>`
 
 Specify additional patterns to exclude files or directories from processing. This option can be used multiple times or with space-separated patterns.
 
@@ -41,7 +41,7 @@ npx better-repo-to-llm https://github.com/user/repo.git --exclude "*.test.js" "d
 
 This will exclude all files ending with `.test.js` and everything in the `docs` directory.
 
-#### --minify
+#### `--minify`
 
 Enable minification of code files by removing extra whitespace and newlines. This option helps reduce the token count for LLM processing.
 
@@ -51,7 +51,7 @@ Example:
 npx better-repo-to-llm https://github.com/user/repo.git --minify
 ```
 
-#### --max-lines <number>
+#### `--max-lines <number>`
 
 Specify the maximum number of lines allowed per file. Files exceeding this limit will be excluded from processing. If not specified, the default is 800 lines.
 

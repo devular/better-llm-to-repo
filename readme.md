@@ -51,6 +51,18 @@ Example:
 npx better-repo-to-llm https://github.com/user/repo.git --minify
 ```
 
+#### --max-lines <number>
+
+Specify the maximum number of lines allowed per file. Files exceeding this limit will be excluded from processing. If not specified, the default is 800 lines.
+
+Example:
+
+```bash
+npx better-repo-to-llm https://github.com/user/repo.git --max-lines 1000
+```
+
+This will set the maximum number of lines per file to 1000, allowing larger files to be included in the output.
+
 #### Debug Mode
 
 To enable debug mode for detailed logging, set the `DEBUG` environment variable to `true`:
@@ -83,7 +95,7 @@ The metadata includes:
 ## File Processing
 
 - The tool respects `.gitignore` rules and additional specified exclusions.
-- Files larger than 800 lines are automatically excluded to prevent oversized outputs.
+- Files larger than the specified maximum number of lines (default 800) are automatically excluded to prevent oversized outputs.
 - Non-text files and files with unsupported extensions are skipped.
 - If minification is enabled, most code files will have extra whitespace removed.
 
@@ -95,7 +107,7 @@ The tool provides an estimate of the total number of tokens in the output, which
 
 - The tool is designed for text-based files and may not handle binary files appropriately.
 - Very large repositories may take a significant amount of time to process.
-- The 800-line limit per file is fixed and cannot be adjusted without modifying the source code.
+- The maximum number of lines per file can be adjusted using the `--max-lines` option.
 
 ## Contributing
 

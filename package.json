@@ -1,0 +1,39 @@
+{
+  "name": "better-repo-to-llm",
+  "version": "1.0.0",
+  "description": "A tool to convert Git repositories to LLM-friendly format",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "bin": {
+    "better-repo-to-llm": "dist/index.mjs"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "start": "node dist/index.mjs"
+  },
+  "keywords": [
+    "git",
+    "llm",
+    "repository",
+    "converter"
+  ],
+  "author": "Jonathon Sherrard",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^8.3.0",
+    "gpt-3-encoder": "^1.1.4",
+    "ignore": "^5.2.0",
+    "slugify": "^1.6.5",
+    "tempy": "^1.0.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "rollup": "^2.75.6"
+  },
+  "engines": {
+    "node": ">=14.16"
+  }
+}

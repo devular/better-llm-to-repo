@@ -112,7 +112,3 @@ The tool provides an estimate of the total number of tokens in the output, which
 ## Contributing
 
 Contributions to Better Repo to LLM are welcome! Please feel free to submit issues, feature requests, or pull requests on the GitHub repository.
-
-## License
-
-[Specify the license here, e.g., MIT, Apache 2.0, etc.]
